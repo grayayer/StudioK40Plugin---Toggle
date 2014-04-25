@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'icomoon-toggle';
+	src:url('fonts/icomoon-toggle.eot');
+	src:url('fonts/icomoon-toggle.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon-toggle.svg#icomoon') format('svg'),
+		url('fonts/icomoon-toggle.woff') format('woff'),
+		url('fonts/icomoon-toggle.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon-toggle';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-plus-alt:before, .icon-minus-alt:before, .icon-plus:before, .icon-minus:before, .icon-x-altx-alt:before, .icon-check-alt:before {
+	font-family: 'icomoon-toggle';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-plus-alt:before {
+	content: "\e000";
+}
+.icon-minus-alt:before {
+	content: "\e001";
+}
+.icon-plus:before {
+	content: "\e002";
+}
+.icon-minus:before {
+	content: "\e003";
+}
+.icon-x-altx-alt:before {
+	content: "\e004";
+}
+.icon-check-alt:before {
+	content: "\e005";
+}

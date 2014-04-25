@@ -1,0 +1,120 @@
+/* Use this script if you need to support IE 7 and IE 6. */
+
+window.onload = function() {
+	function addIcon(el, entity) {
+		var html = el.innerHTML;
+		el.innerHTML = '<span style="font-family: \'icomoon\'">' + entity + '</span>' + html;
+	}
+	var icons = {
+			'icon-facebook' : '&#xe000;',
+			'icon-facebook-2' : '&#xe002;',
+			'icon-facebook-3' : '&#xe001;',
+			'icon-twitter' : '&#xe003;',
+			'icon-twitter-2' : '&#xe004;',
+			'icon-twitter-3' : '&#xe005;',
+			'icon-linkedin' : '&#xe006;',
+			'icon-linkedin-2' : '&#xe007;',
+			'icon-link' : '&#xe008;',
+			'icon-mail' : '&#xe009;',
+			'icon-mail-2' : '&#xe00a;',
+			'icon-phone' : '&#xe00b;',
+			'icon-home' : '&#xe00c;',
+			'icon-address-book' : '&#xe00d;',
+			'icon-file-pdf' : '&#xe00e;',
+			'icon-film' : '&#xe00f;',
+			'icon-comments' : '&#xe010;',
+			'icon-user' : '&#xe011;',
+			'icon-star' : '&#xe012;',
+			'icon-heart' : '&#xe013;',
+			'icon-heart-2' : '&#xe014;',
+			'icon-arrow-up' : '&#xe015;',
+			'icon-arrow-right' : '&#xe016;',
+			'icon-arrow-down' : '&#xe017;',
+			'icon-arrow-left' : '&#xe018;',
+			'icon-arrow-up-2' : '&#xe019;',
+			'icon-arrow-right-2' : '&#xe01a;',
+			'icon-arrow-down-2' : '&#xe01b;',
+			'icon-arrow-left-2' : '&#xe01c;',
+			'icon-wordpress' : '&#xe01d;',
+			'icon-paperclip' : '&#xe01f;',
+			'icon-download' : '&#xe021;',
+			'icon-arrow-down-alt1' : '&#xe022;',
+			'icon-mobile' : '&#xe01e;',
+			'icon-earth' : '&#xe020;',
+			'icon-zoom-in' : '&#xe023;',
+			'icon-search' : '&#xe024;',
+			'icon-rocket' : '&#xe025;',
+			'icon-coffee' : '&#xe026;',
+			'icon-wrench' : '&#xe027;',
+			'icon-zoom-out' : '&#xe028;',
+			'icon-cog' : '&#xe029;',
+			'icon-plus' : '&#xe02a;',
+			'icon-minus' : '&#xe02b;',
+			'icon-help' : '&#xe02c;',
+			'icon-blocked' : '&#xe02d;',
+			'icon-cancel' : '&#xe02e;',
+			'icon-cancel-2' : '&#xe02f;',
+			'icon-checkmark' : '&#xe030;',
+			'icon-minus-2' : '&#xe031;',
+			'icon-plus-2' : '&#xe032;',
+			'icon-droplet' : '&#xe033;',
+			'icon-play' : '&#xe034;',
+			'icon-camera' : '&#xe035;',
+			'icon-music' : '&#xe036;',
+			'icon-printer' : '&#xe037;',
+			'icon-user-2' : '&#xe038;',
+			'icon-key' : '&#xe039;',
+			'icon-locked' : '&#xe03a;',
+			'icon-gift' : '&#xe03b;',
+			'icon-fire' : '&#xe03c;',
+			'icon-lab' : '&#xe03d;',
+			'icon-music-2' : '&#xe03e;',
+			'icon-mobile-2' : '&#xe03f;',
+			'icon-gift-2' : '&#xe040;',
+			'icon-map-pin-stroke' : '&#xe041;',
+			'icon-location' : '&#xe042;',
+			'icon-paypal' : '&#xe043;',
+			'icon-skype' : '&#xe044;',
+			'icon-yelp' : '&#xe045;',
+			'icon-home-2' : '&#xe046;',
+			'icon-pencil' : '&#xe047;',
+			'icon-pencil-2' : '&#xe048;',
+			'icon-broadcast' : '&#xe049;',
+			'icon-clock' : '&#xe04a;',
+			'icon-camera-2' : '&#xe04b;',
+			'icon-comments-2' : '&#xe04c;',
+			'icon-accessibility' : '&#xe04d;',
+			'icon-star-2' : '&#xe04e;',
+			'icon-attachment' : '&#xe04f;',
+			'icon-google-plus' : '&#xe050;',
+			'icon-google-plus-2' : '&#xe051;',
+			'icon-plus-alt' : '&#xe052;',
+			'icon-minus-alt' : '&#xe053;',
+			'icon-x-altx-alt' : '&#xe054;',
+			'icon-check-alt' : '&#xe055;',
+			'icon-checkmark-2' : '&#xe056;',
+			'icon-x' : '&#xe057;',
+			'icon-move-alt2' : '&#xe058;',
+			'icon-arrow-left-alt1' : '&#xe059;',
+			'icon-arrow-right-alt1' : '&#xe05a;',
+			'icon-arrow-up-alt1' : '&#xe05b;',
+			'icon-microphone' : '&#xe05c;',
+			'icon-headphones' : '&#xe05d;',
+			'icon-calendar' : '&#xe05e;',
+			'icon-calendar-2' : '&#xe05f;'
+		},
+		els = document.getElementsByTagName('*'),
+		i, attr, html, c, el;
+	for (i = 0; i < els.length; i += 1) {
+		el = els[i];
+		attr = el.getAttribute('data-icon');
+		if (attr) {
+			addIcon(el, attr);
+		}
+		c = el.className;
+		c = c.match(/icon-[^\s'"]+/);
+		if (c && icons[c[0]]) {
+			addIcon(el, icons[c[0]]);
+		}
+	}
+};

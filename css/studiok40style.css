@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*icon font rules*/
+@font-face {
+	font-family: 'icomoon-toggle';
+	src:url('../toggle-font/fonts/icomoon-toggle.eot');
+	src:url('../toggle-font/fonts/icomoon-toggle.eot?#iefix') format('embedded-opentype'),
+		url('../toggle-font/fonts/icomoon-toggle.svg#icomoon') format('svg'),
+		url('../toggle-font/fonts/icomoon-toggle.woff') format('woff'),
+		url('../toggle-font/fonts/icomoon-toggle.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon-toggle';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-plus-alt:before, .icon-minus-alt:before, .icon-plus:before, .icon-minus:before, .icon-x-altx-alt:before, .icon-check-alt:before {
+	font-family: 'icomoon-toggle';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-plus-alt:before {
+	content: "\e000";
+}
+.icon-minus-alt:before {
+	content: "\e001";
+}
+.icon-plus:before {
+	content: "\e002";
+}
+.icon-minus:before {
+	content: "\e003";
+}
+.icon-x-altx-alt:before {
+	content: "\e004";
+}
+.icon-check-alt:before {
+	content: "\e005";
+}
+
+
+/*toggle*/
+
+h3.trigger {
+    margin: 0px !important;
+    font-size: 18px;
+    padding: 10px;
+}
+
+h3.trigger span:before {
+	content: "\e000";
+	font-family: 'icomoon-toggle';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	padding-right:10px;
+	margin-left: -30px; /*this is so that the trigger appears as a seperate area, and the trigger will be it's own block, rather than wrapping around the icon when the header is two lines*/
+    position: relative;
+    top: 1px; /*in order to make the icon line up better in the middle of the first line*/
+}
+
+h3.trigger a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+	margin-left: 30px; /*Combines with the negative left margin of the icon so that the trigger appears as a seperate area, and the trigger will be it's own block, rather than wrapping around the icon when the header is two lines*/
+}
+
+h3.trigger a:hover {
+    color: #0489B7;
+    text-decoration: none;
+	}
+
+h3.trigger.active span:before {
+	content: "\e001";	font-family: 'icomoon-toggle';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+h3.toggle-white{
+    background-color: #FFF;
+}
+
+h3.trigger:nth-of-type(odd), h3.trigger:nth-of-type(odd) + div.toggle_container {
+    background-color: #F5F5F5;
+}
+
+h3.toggle-gray{
+    background-color: #F5F5F5;
+}
+
+.toggle_container {
+    overflow: hidden;
+    padding: 0 25px 20px 40px;
+	}
+
+h3.toggle-gray + div.toggle_container{
+    background-color: #F5F5F5;
+}
+
+h3.trigger + div.toggle_container p:last-of-type{ /*I use this, because if a toggle_container only contains 1 paragraph, it won't actually create a "p" to surround it, but if there's a couple, it will. This removes the extra padding on the last paragraph  */
+	margin-bottom: 0;
+}
+
+div.toggle_container + p:empty { /*sometimes there are empty paragraphs created, specifically in the 2nd to last item, so this takes care of that for consistency*/
+	display:none;
+}
+
+div.toggle_container + br, div.toggle_container br:first-of-type { /*to avoid the funny formatting of extra spacing wordpress puts in as a result of their formatting*/
+	display:none;
+}
