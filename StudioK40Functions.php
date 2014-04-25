@@ -49,7 +49,7 @@ function toggle_shortcode( $atts, $content = null )
         'color' => ''
 ),
 $atts ) );
-return '<h3 class="trigger toggle-'.$color.'" title="Click to Open or Close"><a href="#"><span class="icon"></span>'. $title .'</a></h3><div class="toggle_container">' . do_shortcode($content) . '</div>';
+return '<h3 class="trigger toggle-'.$color.'" title="Click to Open or Close"><a><span class="icon"></span>'. $title .'</a></h3><div class="toggle_container">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('toggle', 'toggle_shortcode');
 
