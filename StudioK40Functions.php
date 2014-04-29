@@ -9,7 +9,6 @@ Author: Gray Ayer
 Author URI: http://studiok40.com
 */
 
-
 // loads the javascript files with the wp_enqueue_scripts hook 
  
 add_action( 'wp_enqueue_scripts', 'studiok40_load_javascript_files' );
@@ -40,7 +39,7 @@ function add_studiok40_stylesheet() {
 }
 
 
-//toggle shortcode
+//TOGGLE SHORTCODE
 function toggle_shortcode( $atts, $content = null )
 {
     extract( shortcode_atts(
@@ -64,6 +63,5 @@ global $menu;
 		}
 }
 add_action('admin_menu', 'remove_menus');
-
 
 ?>
