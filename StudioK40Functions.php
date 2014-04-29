@@ -2,8 +2,8 @@
 
 /*
 Plugin Name: Studio K40 Common Functionality Plugin
-Description: All of the important functionality of the site belongs in this.
-Version: 0.1
+Description: All of the important functionality of the site belongs in this. Updated 4/28/2014
+Version: 0.5
 License: GPL
 Author: Gray Ayer
 Author URI: http://studiok40.com
